@@ -1,0 +1,210 @@
+:root {
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  --primary-brand-color: #4d5ae5;
+  --pressed-color: #404bbf;
+
+  --primary-text-color: #434455;
+  --secondary-text-color: #2e2f42;
+  --dark-theme-text-color: #ffffff;
+  --dark-theme-logo-text-color: #f4f4fd;
+  --dark-theme-secondary-text-color: #e7e9fc;
+  --work-info-text-color: #f4f4fd;
+  --primary-background-color: #ffffff;
+  --secondory-backgound-color: #f4f4fd;
+  --dark-background-color: #2e2f42;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  /* color: inherit; */
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+}
+
+/* нижнэ пiдкреслення при наведеннi
+.link:hover, */
+/* .link:focus { */
+/* text-decoration: underline; */
+/* } */
+
+/* ==========Components========= */
+
+.main-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  color: var(--dark-theme-text-color);
+}
+.main-title-none {
+  display: none;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--secondary-text-color);
+}
+
+.section-title-none {
+  display: none;
+}
+
+.section-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--secondary-text-color);
+}
+
+.section-description {
+  color: var(--primary-text-color);
+}
+/* ==========/Components========= */
+
+/* =============Header========== */
+.page-header {
+  background: var(--primary-background-color);
+}
+
+.logo {
+  font-family: var(--secondary-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-brand-color);
+}
+
+.logo-studio {
+  color: var(--secondary-text-color);
+}
+
+.menu-link {
+  font-weight: 500;
+  color: var(--secondary-text-color);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--pressed-color);
+}
+
+.menu-link.current {
+  color: var(--pressed-color);
+}
+
+.contact-mail {
+  color: var(--primary-text-color);
+}
+
+.contact-mail:hover,
+.contact-mail:focus {
+  color: var(--pressed-color);
+}
+
+.contact-phone {
+  color: var(--primary-text-color);
+}
+
+.contact-phone:hover,
+.contact-phone:focus {
+  color: var(--pressed-color);
+}
+/* ===========/Header============*/
+
+/* ============Hero============== */
+.hero {
+  background: var(--dark-background-color);
+}
+
+.modal-btn {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: var(--dark-theme-text-color);
+  background-color: var(--primary-brand-color);
+  cursor: pointer;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--pressed-color);
+}
+/* ==============/Hero=========== */
+
+/* ==============Main============= */
+/*  =============Team============== */
+.section-team {
+  background-color: var(--secondory-backgound-color);
+}
+/* =============/Main================ */
+
+/* =============Footer============= */
+.footer {
+  background: var(--dark-background-color);
+}
+
+.footer .logo-studio {
+  color: var(--dark-theme-logo-text-color);
+}
+
+.footer .section-description {
+  color: var(--dark-theme-secondary-text-color);
+}
+
+/* ==============Portfolio=============*/
+.filters-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  background-color: var(--secondory-backgound-color);
+  color: var(--primary-brand-color);
+  cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: var(--primary-brand-color);
+  color: var(--dark-theme-text-color);
+}
+
+.work-info {
+  color: var(--work-info-text-color);
+  background-color: var(--primary-brand-color);
+}
+/* ==============/Portfolio=============*/
