@@ -14,6 +14,31 @@
   --primary-background-color: #ffffff;
   --secondory-backgound-color: #f4f4fd;
   --dark-background-color: #2e2f42;
+  --border-header-color: #e7e9fc;
+}
+/* Скидаэм зовнiшнi вiдступи, та.iн. стилi браузера */
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
 }
 
 .list {
@@ -34,6 +59,19 @@ body {
   color: var(--primary-text-color);
 }
 
+.container {
+  width: 1158px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  /* display: flex; */
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 /* нижнэ пiдкреслення при наведеннi
 .link:hover, */
 /* .link:focus { */
@@ -54,6 +92,7 @@ body {
 }
 
 .section-title {
+  margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -67,10 +106,17 @@ body {
 }
 
 .section-subtitle {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   color: var(--secondary-text-color);
+}
+.section-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
 }
 
 .section-description {
@@ -81,17 +127,55 @@ body {
 /* =============Header========== */
 .page-header {
   background: var(--primary-background-color);
+  border-bottom: 1px solid var(--border-header-color);
+}
+
+.page-header-container {
+  display: flex;
+  align-items: center;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.contact-item + .contact-item {
+  margin-left: 40px;
 }
 
 .logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-right: 76px;
+
   font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
   color: var(--primary-brand-color);
 }
 
@@ -100,7 +184,12 @@ body {
 }
 
 .menu-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   font-weight: 500;
+
   color: var(--secondary-text-color);
 }
 
@@ -113,38 +202,47 @@ body {
   color: var(--pressed-color);
 }
 
-.contact-mail {
+.contact-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   color: var(--primary-text-color);
 }
 
-.contact-mail:hover,
-.contact-mail:focus {
-  color: var(--pressed-color);
-}
-
-.contact-phone {
-  color: var(--primary-text-color);
-}
-
-.contact-phone:hover,
-.contact-phone:focus {
+.contact-link:hover,
+.contact-link:focus {
   color: var(--pressed-color);
 }
 /* ===========/Header============*/
 
 /* ============Hero============== */
+
+.hero-container {
+  padding: 188px 0;
+  text-align: center;
+}
+
+.main-title {
+  width: 496px;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero {
   background: var(--dark-background-color);
 }
 
 .modal-btn {
+  padding: 16px 32px;
+  gap: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   font-weight: 500;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
   color: var(--dark-theme-text-color);
   background-color: var(--primary-brand-color);
-  cursor: pointer;
 }
 
 .modal-btn:hover,
@@ -154,17 +252,62 @@ body {
 /* ==============/Hero=========== */
 
 /* ==============Main============= */
-/*  =============Team============== */
+/* Skills */
+.skill-content {
+  flex-basis: calc((100% - 3 * 24px) / 4);
+}
+
+/* Doing */
+.section-examples {
+  padding-top: 0;
+}
+.doing-card {
+  flex-basis: calc((100% - 2 * 24px) / 3);
+}
+
+/*  Team */
+
 .section-team {
   background-color: var(--secondory-backgound-color);
+}
+
+.team-card {
+  flex-basis: calc((100% - 3 * 24px) / 4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0px 0px 32px;
+  gap: 32px; */
+  background: var(--primary-background-color) #ffffff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-card-content {
+  padding: 32px 16px;
+  text-align: center;
 }
 /* =============/Main================ */
 
 /* =============Footer============= */
+.footer-container {
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-width: 264px;
+}
+
 .footer {
   background: var(--dark-background-color);
 }
 
+.footer .logo {
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 16px;
+}
 .footer .logo-studio {
   color: var(--dark-theme-logo-text-color);
 }
@@ -179,22 +322,34 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-top: 96px;
+  margin-bottom: 72px;
+}
+
+.filter-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter-item:not(:last-child) {
+  margin-right: 24px;
 }
 
 .filter-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  padding: 12px 24px;
+  /* gap: 24px; */
 
   font-weight: 500;
-  display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.04em;
+
   background-color: var(--secondory-backgound-color);
   color: var(--primary-brand-color);
-  cursor: pointer;
+
+  border: 1px solid var(--dark-theme-secondary-text-color);
+  border-radius: 4px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter-btn:hover,
@@ -207,4 +362,18 @@ body {
   color: var(--work-info-text-color);
   background-color: var(--primary-brand-color);
 }
+
+.work-link {
+  display: block;
+}
+.work-card-content {
+  padding: 32px 16px;
+}
+.section-works {
+  padding-bottom: 120px;
+}
+/* .section-works .container {
+  background-color: chartreuse;
+} */
+
 /* ==============/Portfolio=============*/
