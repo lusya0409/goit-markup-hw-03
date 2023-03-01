@@ -35,6 +35,7 @@ ol {
 
 img {
   display: block;
+  /* max-width: 100%; */
 }
 
 button {
@@ -68,7 +69,6 @@ body {
 }
 
 .section {
-  /* display: flex; */
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -93,11 +93,13 @@ body {
 
 .section-title {
   margin-bottom: 72px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   text-transform: capitalize;
+
   color: var(--secondary-text-color);
 }
 
@@ -110,6 +112,7 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+
   color: var(--secondary-text-color);
 }
 .section-list {
@@ -237,12 +240,15 @@ body {
 .modal-btn {
   padding: 16px 32px;
   gap: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+
   font-weight: 500;
   letter-spacing: 0.04em;
+
   color: var(--dark-theme-text-color);
   background-color: var(--primary-brand-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .modal-btn:hover,
@@ -252,6 +258,7 @@ body {
 /* ==============/Hero=========== */
 
 /* ==============Main============= */
+
 /* Skills */
 .skill-content {
   flex-basis: calc((100% - 3 * 24px) / 4);
@@ -261,25 +268,26 @@ body {
 .section-examples {
   padding-top: 0;
 }
+
 .doing-card {
   flex-basis: calc((100% - 2 * 24px) / 3);
 }
 
 /*  Team */
-
 .section-team {
   background-color: var(--secondory-backgound-color);
 }
 
 .team-card {
-  flex-basis: calc((100% - 3 * 24px) / 4);
   display: flex;
+  flex-basis: calc((100% - 3 * 24px) / 4);
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 0px 0px 32px;
-  gap: 32px; */
-  background: var(--primary-background-color) #ffffff;
+
+  background-color: var(--primary-background-color);
+
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
@@ -308,6 +316,7 @@ body {
   margin-right: 0;
   margin-bottom: 16px;
 }
+
 .footer .logo-studio {
   color: var(--dark-theme-logo-text-color);
 }
@@ -317,12 +326,15 @@ body {
 }
 
 /* ==============Portfolio=============*/
+.section-works .section {
+  padding-top: 96px;
+}
+
 .filters-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-top: 96px;
   margin-bottom: 72px;
 }
 
@@ -331,13 +343,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .filter-item:not(:last-child) {
   margin-right: 24px;
 }
 
 .filter-btn {
   padding: 12px 24px;
-  /* gap: 24px; */
 
   font-weight: 500;
   text-align: center;
@@ -359,21 +371,19 @@ body {
 }
 
 .work-info {
+  display: none;
   color: var(--work-info-text-color);
   background-color: var(--primary-brand-color);
 }
 
-.work-link {
+/* .work-link {
   display: block;
-}
-.work-card-content {
-  padding: 32px 16px;
-}
-.section-works {
-  padding-bottom: 120px;
-}
-/* .section-works .container {
-  background-color: chartreuse;
+  border: 1px solid var(--border-header-color);
+  max-width: 360px;
 } */
 
+.work-card-content {
+  padding: 32px 16px;
+  border: 1px solid var(--border-header-color);
+}
 /* ==============/Portfolio=============*/
