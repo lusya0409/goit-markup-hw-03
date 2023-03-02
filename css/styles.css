@@ -35,7 +35,8 @@ ol {
 
 img {
   display: block;
-  /* max-width: 100%; */
+  max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -265,7 +266,7 @@ body {
 }
 
 /* Doing */
-.section-examples {
+.section-doing {
   padding-top: 0;
 }
 
@@ -302,19 +303,22 @@ body {
 /* =============Footer============= */
 .footer-container {
   display: block;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
   max-width: 264px;
 }
 
 .footer {
   background: var(--dark-background-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-
 .footer .logo {
   display: inline-block;
   margin-right: 0;
   margin-bottom: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .footer .logo-studio {
@@ -326,7 +330,7 @@ body {
 }
 
 /* ==============Portfolio=============*/
-.section-works .section {
+.section-works {
   padding-top: 96px;
 }
 
